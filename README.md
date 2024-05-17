@@ -112,35 +112,35 @@ The `SubtleCryptr` class has the following methods:
 
 ### `encrypt(data)`
 
-Encrypts the given data using the AES-GCM 256 algorithm.
+Encrypts serialized data (Uint8Array). Based on AES-GCM recommandations, the IV is randomly generated at each call and on 12 bytes-long (96-bits). 
 
-- `data` (string | ArrayBuffer | ArrayBufferView): The data to encrypt. This parameter is required and can be a string, an ArrayBuffer, or an ArrayBufferView.
+- `serializedData` (Uint8Array): The data to encrypt. This parameter is required and can be a string, an ArrayBuffer, or an ArrayBufferView.
 
-Returns a Promise that resolves with the encrypted data.
+Returns a Promise that resolves with the encrypted data as a base64 encoded string. Result is composed of the IV (16 characters, base64 encoded) and the encrypted data (also base64 encoded), both concatenated in a single string.
 
 ### `decrypt(encryptedData)`
 
-Decrypts the given encrypted data using the AES-GCM 256 algorithm.
+Decrypts the encrypted data.
 
-- `encryptedData` (string | ArrayBuffer | ArrayBufferView): The encrypted data to decrypt. This parameter is required and can be a string, an ArrayBuffer, or an ArrayBufferView.
+- `encryptedData` (base64 encoded string): The encrypted data to decrypt. Expected to be a base64 encoded string.
 
-Returns a Promise that resolves with the decrypted data.
+Returns a Promise that resolves with the decrypted data as serialized data (Uint8Array).
 
 ### `encryptStr(str)`
 
-Encrypts the given string using the AES-GCM 256 algorithm.
+Encrypts a simple string, converting the string to a Uint8Array, and using above encrypt method.
 
-- `str` (string): The string to encrypt. This parameter is required.
+- `str` (string): The string to encrypt.
 
-Returns a Promise that resolves with the encrypted data.
+Returns a Promise that resolves with the encrypted data as a base64 encoded string. 
 
 ### `decryptStr(encryptedStr)`
 
-Decrypts the given encrypted string using the AES-GCM 256 algorithm.
+Decrypts the encrypted string.
 
-- `encryptedStr` (string): The encrypted string to decrypt. This parameter is required.
+- `encryptedStr` (base64 encoded string): The encrypted data to decrypt. Expected to be a base64 encoded string.
 
-Returns a Promise that resolves with the decrypted string.
+Returns a Promise that resolves with the decrypted data as a string.
 
 ## Contributing
 

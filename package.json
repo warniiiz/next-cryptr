@@ -1,0 +1,46 @@
+{
+  "name": "subtle-cryptr",
+  "version": "1.0.0",
+  "description": "Cryptographic utility for encrypting and decrypting data using AES-GCM 256 algorithm",
+  "author": "Clément Warneys",
+  "license": "ISC",
+  "main": "dist/subtle-cryptr.js",
+  "scripts": {
+    "test": "node node_modules/jest/bin/jest.js ./dist",
+    "test-src": "node --experimental-vm-modules node_modules/jest/bin/jest.js ./src",
+    "build": "babel ./src --out-dir ./dist"
+  },
+  "keywords": [
+    "cryptography",
+    "AES-GCM",
+    "AES-256 GCM",
+    "AES",
+    "GCM",
+    "encryption",
+    "decryption",
+    "encrypt",
+    "decrypt",
+    "crypto",
+    "subtle",
+    "cryptr",
+    "crypto",
+    "symmetric",
+    "cipher",
+    "authentication",
+    "security",
+    "nextjs",
+    "edge",
+    "edge-runtime"
+  ],
+  "devDependencies": {
+    "@babel/cli": "^7.24.5",
+    "@babel/core": "^7.24.5",
+    "@babel/preset-env": "^7.24.5",
+    "jest": "^29.7.0"
+  },
+  "jest": {
+    "transform": {},
+    "moduleFileExtensions": ["mjs", "js"],
+    "testRegex": "test\\.m?js$"
+  }
+}

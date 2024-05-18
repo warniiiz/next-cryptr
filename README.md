@@ -30,7 +30,7 @@ import { SubtleCryptr } from 'subtle-cryptr';
 Or in old javascript style...
 
 ```javascript
-const { SubtleCryptr } = require('subtle-cryptr');
+const SubtleCryptr = require('subtle-cryptr').SubtleCryptr;
 ```
 
 Next, create a new instance of `SubtleCryptr`, passing your secret as a parameter to the constructor:

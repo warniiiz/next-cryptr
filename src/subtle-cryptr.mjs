@@ -143,7 +143,7 @@ export class SubtleCryptr {
    * converting the string to a Uint8Array, and using above encrypt method.
    *
    * @param {string} str - The raw string value to be encrypted.
-   * @returns {Promise<Uint8Array>} - A promise that resolves to the encrypted value as an ArrayBuffer.
+   * @returns {Promise<Uint8Array>} - A promise that resolves to the encrypted value as an Uint8Array.
    */
   encryptStr = async (str) => {
     const strArray = Uint8Array.from(Buffer.from(str.toString()));

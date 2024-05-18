@@ -1,6 +1,6 @@
 {
   "name": "subtle-cryptr",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Cryptographic utility for encrypting and decrypting data using AES-GCM 256 algorithm",
   "author": "Clément Warneys",
   "license": "ISC",

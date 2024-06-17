@@ -1,6 +1,6 @@
 {
   "name": "next-cryptr",
-  "version": "1.1.0",
+  "version": "1.1.2",
   "description": "Cryptographic utility for encrypting and decrypting data using AES-GCM 256 algorithm. Fully optimized for Next.js. Based on built-in API crypto.subtle.* methods.",
   "author": "Clément Warneys",
   "license": "ISC",

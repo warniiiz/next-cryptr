@@ -19,6 +19,10 @@ NextCryptr is compatible with the following runtime environments (non exhaustive
 - Next.js Edge Runtime
 - Web browsers
 
+NextCryptr is fully optimized and has great performances ([see dedicated section](#performances) for more information):
+- 2x faster than native Node.js `node:crypto` module for encrypting and decryptind data up to 4kB;
+- 1000x to 6000x faster than the widely used `cryptr` NPM module for encrypting and decrypting data up to 10kB.
+
 
 ## Installation
 
